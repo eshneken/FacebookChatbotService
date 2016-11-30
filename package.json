@@ -4,8 +4,8 @@
   "description": "Facebook chatbot",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+        "prepublish": "zip -r target/facebook-chatbot-service.zip node_modules manifest.json *.js"
+    },
   "author": "Ed Shnekendorf",
   "license": "ISC",
   "dependencies": {
