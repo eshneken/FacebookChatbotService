@@ -92,7 +92,7 @@ botly.on('message', function (sender, message, data) {
             let element = botly.createListElement({
                 title: "Application Container Cloud Service",
                 subtitle: "Cloud Native Polyglot Platform",
-                image_url: "https://FacebookChatbotService-gse00001973.apaas.em2.oraclecloud.com/doc_root/java_ee.PNG"
+                image_url: "http://FacebookChatbotService-gse00001973.apaas.em2.oraclecloud.com/java_ee.PNG",
                 buttons: [
                     {
                         title: "View",
@@ -107,7 +107,7 @@ botly.on('message', function (sender, message, data) {
             let element2 = botly.createListElement({
                 title: "Java Cloud Service",
                 subtitle: "Cloud-based Java EE Runtime",
-                image_url: "https://FacebookChatbotService-gse00001973.apaas.em2.oraclecloud.com/doc_root/accs.PNG"
+                image_url: "http://FacebookChatbotService-gse00001973.apaas.em2.oraclecloud.com/accs.PNG",
                 buttons: [
                     {
                         title: "View",
@@ -122,7 +122,7 @@ botly.on('message', function (sender, message, data) {
             let element3 = botly.createListElement({
                 title: "Mobile Cloud Service",
                 subtitle: "Mobile Backend-as-a-Service",
-                image_url: "https://FacebookChatbotService-gse00001973.apaas.em2.oraclecloud.com/doc_root/mobile.PNG"
+                image_url: "http://FacebookChatbotService-gse00001973.apaas.em2.oraclecloud.com/mobile.PNG",
                 buttons: [
                     {
                         title: "View",
