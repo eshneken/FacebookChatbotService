@@ -4,7 +4,7 @@
   "description": "Facebook chatbot",
   "main": "app.js",
   "scripts": {
-        "prepublish": "zip -r target/facebook-chatbot-service.zip node_modules manifest.json *.js"
+        "prepublish": "zip -r target/facebook-chatbot-service.zip node_modules doc_root manifest.json *.js"
     },
   "author": "Ed Shnekendorf",
   "license": "ISC",
