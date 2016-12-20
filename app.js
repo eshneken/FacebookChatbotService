@@ -1,7 +1,14 @@
+//
+// Sample Facebook Chatbot
+//
+// Ed Shnekendorf, ed.shnekendorf@oracle.com, 12/20/2016
+//
 // Based on: http://www.ateam-oracle.com/getting-started-with-chatbots/
+//
 // For local testing use "ngrok http 8081" (ngrok.com) and replace the webhook URL in developer.facebook.com with the HTTPS link.  Start the local listener (node app.js) at configuration.
 // For cloud deployment, use webhook URL:  https://FacebookChatbotService-gse00001973.apaas.em2.oraclecloud.com/webhook
 // Verify token (see below) must be entered every time a webhook change is made and you will probably need to go to the Messenger-> settings and unsubscribe/resubscribe the page
+//
 
 "use strict";
 
@@ -85,6 +92,7 @@ botly.on('message', function (sender, message, data) {
             let element = botly.createListElement({
                 title: "Application Container Cloud Service",
                 subtitle: "Cloud Native Polyglot Platform",
+                image_url: "https://FacebookChatbotService-gse00001973.apaas.em2.oraclecloud.com/doc_root/java_ee.PNG"
                 buttons: [
                     {
                         title: "View",
@@ -99,6 +107,7 @@ botly.on('message', function (sender, message, data) {
             let element2 = botly.createListElement({
                 title: "Java Cloud Service",
                 subtitle: "Cloud-based Java EE Runtime",
+                image_url: "https://FacebookChatbotService-gse00001973.apaas.em2.oraclecloud.com/doc_root/accs.PNG"
                 buttons: [
                     {
                         title: "View",
@@ -113,6 +122,7 @@ botly.on('message', function (sender, message, data) {
             let element3 = botly.createListElement({
                 title: "Mobile Cloud Service",
                 subtitle: "Mobile Backend-as-a-Service",
+                image_url: "https://FacebookChatbotService-gse00001973.apaas.em2.oraclecloud.com/doc_root/mobile.PNG"
                 buttons: [
                     {
                         title: "View",
@@ -251,6 +261,7 @@ botly.on("postback", function (sender, message, postback) {
 
 var app = express();
 app.use(bodyParser.json());
+app.use(express.static('./doc_root'));
 app.use("/webhook", botly.router());
 app.listen(PORT);
 console.log("Chatbot Service started and listening on port " + PORT);
