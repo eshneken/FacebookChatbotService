@@ -18,7 +18,7 @@ var PORT = process.env.PORT || 8081;
 var VERSION = "1.0.0";
 
 // set the image docroot.  If we're running locally use the localhost, otherwise the ACCS address
-var imageDocRoot = "http://localhost:" + PORT;
+var imageDocRoot = "http://localhost:" + PORT + "/";
 if (PORT != 8081)
     imageDocRoot = "http://FacebookChatbotService-gse00001973.apaas.em2.oraclecloud.com/";
 
@@ -97,7 +97,7 @@ botly.on('message', function (sender, message, data) {
             let element = botly.createListElement({
                 title: "Application Container Cloud Service",
                 subtitle: "Cloud Native Polyglot Platform",
-                image_url: imageDocRoot + "java_ee.PNG",
+                image_url: `${imageDocRoot}java_ee.PNG`,
                 buttons: [
                     {
                         title: "View",
@@ -112,7 +112,7 @@ botly.on('message', function (sender, message, data) {
             let element2 = botly.createListElement({
                 title: "Java Cloud Service",
                 subtitle: "Cloud-based Java EE Runtime",
-                image_url: imageDocRoot + "/accs.PNG",
+                image_url: `${imageDocRoot}accs.PNG`,
                 buttons: [
                     {
                         title: "View",
@@ -127,7 +127,7 @@ botly.on('message', function (sender, message, data) {
             let element3 = botly.createListElement({
                 title: "Mobile Cloud Service",
                 subtitle: "Mobile Backend-as-a-Service",
-                image_url: imageDocRoot + "/mobile.PNG",
+                image_url: `${imageDocRoot}mobile.PNG`,
                 buttons: [
                     {
                         title: "View",
