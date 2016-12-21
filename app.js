@@ -42,7 +42,7 @@ botly.on('message', function (sender, message, data) {
 
 
     if (users[sender]) {
-        if (data && data.text && data.text.indexOf("image") !== -1) {
+        if (data && data.text && data.text.indexOf("picture") !== -1) {
             botly.sendImage({
                 id: sender,
                 url: "https://s-media-cache-ak0.pinimg.com/originals/8b/9c/55/8b9c55bc07aeca329b8cdd3bbe5f6c57.jpg"
@@ -103,10 +103,7 @@ botly.on('message', function (sender, message, data) {
                         title: "View",
                         url: "https://cloud.oracle.com/application-container-cloud"
                     }
-                ],
-                default_action: {
-                    "url": "https://cloud.oracle.com/application-container-cloud",
-                }
+                ]
             });
 
             let element2 = botly.createListElement({
@@ -118,10 +115,7 @@ botly.on('message', function (sender, message, data) {
                         title: "View",
                         url: "https://cloud.oracle.com/en_US/java"
                     }
-                ],
-                default_action: {
-                    "url": "https://cloud.oracle.com/en_US/java",
-                }
+                ]
             });
 
             let element3 = botly.createListElement({
@@ -133,15 +127,12 @@ botly.on('message', function (sender, message, data) {
                         title: "View",
                         url: "https://cloud.oracle.com/en_US/mobile"
                     }
-                ],
-                default_action: {
-                    "url": "https://cloud.oracle.com/en_US/mobile",
-                }
+                ]
             });
 
             botly.sendList({
                 id: sender,
-                elements: [element, element2, element3],
+                elements: [element, element2],
                 buttons: botly.createPostbackButton("All AppDev Services", "All AppDev Services"),
                 top_element_style: Botly.CONST.TOP_ELEMENT_STYLE.COMPACT
             }, function (err, data) {
@@ -223,7 +214,7 @@ botly.on('message', function (sender, message, data) {
             botly.send({
                 id: sender,
                 message: {
-                    text: `${users[sender].first_name}, are you interested in learning about Oracle PaaS, seeing a receipt for your recent purchase, or seeing an image of me?`
+                    text: `${users[sender].first_name}, are you interested in learning about Oracle PaaS, seeing a receipt for your recent purchase, or seeing an picture of me?`
                 }
             }, function (err, data) {
                 console.log("regular send cb:", err, data);
